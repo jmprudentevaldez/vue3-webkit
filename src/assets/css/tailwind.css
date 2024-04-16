@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .theme-light {
+    --color-text-base: 51, 51, 51;
+    --color-text-muted: 123, 123, 123;
+    --color-text-inverted: 250, 250, 250;
+    --color-text-tooling: 173, 173, 173;
+    --color-text-panel-info: 9, 64, 77;
+    --color-text-panel-success: 1, 51, 31;
+    --color-text-panel-warning: 78, 63, 1;
+    --color-text-panel-error: 87, 1, 0;
+    --color-text-info: 37, 99, 235;
+    --color-text-success: 19, 163, 72;
+    --color-text-warning: 219, 119, 6;
+    --color-text-error: 241, 101, 122;
+    --color-bg-panel-info: 200, 225, 231;
+    --color-bg-panel-success: 56, 211, 153;
+    --color-bg-panel-warning: 247, 229, 137;
+    --color-bg-panel-error: 241, 101, 122;
+    --color-primary: 76, 107, 250;
+    --color-bg-content-base: 255, 255, 255;
+    --color-bg-content-section: 230, 230, 230;
+    --color-bg-content-section-hover: 213, 213, 213;
+    --color-bg-tooling: 75, 70, 70;
+    --color-bg-input: 210, 210, 210;
+    --color-text-input: 51, 51, 51;
+  }
+
+  .theme-dark {
+    --color-text-base: 215, 203, 204;
+    --color-text-muted: 175, 167, 167;
+    --color-text-inverted: 221, 255, 184;
+    --color-text-tooling: 168, 168, 168;
+    --color-text-panel-info: 1, 43, 60;
+    --color-text-panel-success: 1, 51, 31;
+    --color-text-panel-warning: 78, 63, 1;
+    --color-text-panel-error: 71, 0, 0;
+    --color-text-info: 59, 191, 248;
+    --color-text-success: 56, 211, 153;
+    --color-text-warning: 247, 229, 137;
+    --color-text-error: 242, 182, 181;
+    --color-bg-panel-info: 59, 191, 248;
+    --color-bg-panel-success: 56, 211, 153;
+    --color-bg-panel-warning: 247, 229, 137;
+    --color-bg-panel-error: 242, 182, 181;
+    --color-primary: 29, 184, 83;
+    --color-bg-content-base: 23, 18, 18;
+    --color-bg-content-section: 20, 16, 16;
+    --color-bg-content-section-hover: 31, 24, 24;
+    --color-bg-tooling: 59, 46, 46;
+    --color-bg-input: 59, 46, 46;
+    --color-text-input: 168, 168, 168;
+  }
+
+  .theme-space {
+    --color-text-base: 179, 196, 238;
+    --color-text-muted: 168, 183, 224;
+    --color-text-inverted: 1, 43, 60;
+    --color-text-tooling: 179, 196, 238;
+    --color-text-panel-info: 204, 230, 250;
+    --color-text-panel-success: 0, 51, 44;
+    --color-text-panel-warning: 66, 46, 0;
+    --color-text-panel-error: 70, 0, 11;
+    --color-text-info: 12, 166, 233;
+    --color-text-success: 41, 212, 188;
+    --color-text-warning: 244, 194, 81;
+    --color-text-error: 251, 111, 132;
+    --color-bg-panel-info: 12, 166, 233;
+    --color-bg-panel-success: 41, 212, 188;
+    --color-bg-panel-warning: 244, 194, 81;
+    --color-bg-panel-error: 251, 111, 132;
+    --color-primary: 59, 191, 248;
+    --color-bg-content-base: 15, 23, 41;
+    --color-bg-content-section: 11, 19, 34;
+    --color-bg-content-section-hover: 19, 32, 56;
+    --color-bg-tooling: 29, 41, 58;
+    --color-bg-input: 29, 41, 58;
+    --color-text-input: 179, 196, 238;
+  }
+
+  .theme-old-school {
+    --color-text-base: 40, 36, 37;
+    --color-text-muted: 77, 72, 66;
+    --color-text-inverted: 230, 217, 157;
+    --color-text-tooling: 231, 218, 182;
+    --color-text-panel-info: 210, 223, 255;
+    --color-text-panel-success: 189, 254, 213;
+    --color-text-panel-warning: 46, 25, 1;
+    --color-text-panel-error: 255, 204, 204;
+    --color-text-info: 37, 99, 235;
+    --color-text-success: 19, 163, 72;
+    --color-text-warning: 219, 119, 6;
+    --color-text-error: 220, 40, 40;
+    --color-bg-panel-info: 37, 99, 235;
+    --color-bg-panel-success: 19, 163, 72;
+    --color-bg-panel-warning: 219, 119, 6;
+    --color-bg-panel-error: 220, 40, 40;
+    --color-primary: 186, 2, 14;
+    --color-bg-content-base: 229, 216, 180;
+    --color-bg-content-section: 210, 197, 157;
+    --color-bg-content-section-hover: 194, 181, 149;
+    --color-bg-tooling: 124, 114, 89;
+    --color-bg-input: 243, 229, 193;
+    --color-text-input: 40, 36, 36;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--color-bg-tooling));
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(var(--color-bg-content-section-hover));
+    border-radius: 5px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--color-bg-tooling), 0.85);
+    border-radius: 14px;
+  }
+}
+
+@layer components {
+  .separator-h {
+    @apply h-[1px] bg-theme-section-hover;
+  }
+
+  .nav-base-icon-button {
+    @apply transition-transform duration-150 ease-in hover:-translate-y-0.5
+        hover:scale-125 focus-visible:outline-none
+        focus-visible:ring-1 focus-visible:ring-theme-primary;
+  }
+}
